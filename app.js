@@ -1,14 +1,11 @@
 const express = require("express");
 
-
 const app = express();
 app.set('view engine', 'pug')
 
-
 app.get("/", async (_req, res) => {
-   res.render('index', {message: "Hello World!"})
+   res.render('index', {message: "Привет мир!"})
 });
-
 
 const port = parseInt(process.env.PORT) || 8080;
 app.listen(port, async () => {
